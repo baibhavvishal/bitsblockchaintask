@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2Z</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="mainMenu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>A2Z</h1>
+        <input type="text" id="searchInput" placeholder="Search items...">
+        <select id="categorySelect">
+            <option value="all">All Categories</option>
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+
+        </select>
+        <button id="connectWalletBtn">Connect Wallet</button>
+    </header>
+    <main>
+        <div class="item" data-name="Item 1" data-price="10.00" data-category="category1" onclick="showItemDetails(1)">
+            <img src="item1.jpg" alt="Item 1">
+            <h2>Item 1</h2>
+            <p>10.00</p>
+        </div>
+        <div class="item" data-name="Item 2" data-price="15.00" data-category="category2" onclick="showItemDetails(2)">
+            <img src="item2.jpg" alt="Item 2">
+            <h2>Item 2</h2>
+            <p>15.00</p>
+        </div>
+
+    </main>
+
+    <div id="itemDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeItemDetailsModal()">&times;</span>
+            <img id="itemImage" src="" alt="Item">
+            <h2 id="itemName"></h2>
+            <p id="itemPrice"></p>
+            <button onclick="purchaseItem()">Purchase</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
